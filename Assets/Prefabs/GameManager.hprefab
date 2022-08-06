@@ -1,0 +1,26 @@
+Prefab:
+  - Entity: 18115066547725974283
+    TagComponent:
+      Tag: GameManager
+    Parent: 0
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 15232084394035638090
+      Entity: 18115066547725974283
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    ScriptComponent:
+      ClassHandle: 766918227
+    RigidBodyComponent:
+      BodyType: 1
+      LayerID: 0
+      Mass: 1
+      LinearDrag: 0.00999999978
+      AngularDrag: 0.0500000007
+      DisableGravity: false
+      IsKinematic: true
+      CollisionDetection: 0
+      LockFlags: "\x00"

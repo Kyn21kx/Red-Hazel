@@ -1,0 +1,218 @@
+Triggers:
+  - DebugName: play_sound
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_soundgraph
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: stop_object
+    Actions:
+      - Type: StopAll
+        Target: 0
+        Context: GameObject
+  - DebugName: play_humming_capsule
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_test_01
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_test_05
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: pause_sound
+    Actions:
+      - Type: Pause
+        Target: 0
+        Context: GameObject
+      - Type: Stop
+        Target: 0
+        Context: GameObject
+      - Type: Play
+        Target: 0
+        Context: GameObject
+      - Type: Stop
+        Target: 0
+        Context: GameObject
+  - DebugName: play_sound2
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_sound_cone_top
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_footstep
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_amb_windy
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: resume_sound
+    Actions:
+      - Type: Resume
+        Target: 0
+        Context: GameObject
+  - DebugName: play_test_04
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_sound_cube
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: stop_sound
+    Actions:
+      - Type: StopAll
+        Target: 0
+        Context: GameObject
+  - DebugName: play_component
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: stop_component
+    Actions:
+      - Type: Stop
+        Target: 0
+        Context: GameObject
+  - DebugName: play_test_02
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_sound_area
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_flying_sphere
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_nonsoundgraph
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: spatializer_stress
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_sound_cone
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_sound_sphere
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_flying_cube
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_amb_thunder
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: spread_focus_test
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+  - DebugName: play_test_03
+    Actions:
+      - Type: Play
+        Target: 0
+        Context: GameObject
+---
+TriggersTreeView:
+  - Name: RootNode
+    Children:
+      - Name: AudioDemo
+        Children:
+          - Name: Ambiance
+            Children:
+              - Name: play_amb_thunder
+                CommandID: 3800972795
+              - Name: play_amb_windy
+                CommandID: 1472264919
+          - Name: play_flying_cube
+            CommandID: 3553984890
+          - Name: play_flying_sphere
+            CommandID: 2330722508
+          - Name: play_humming_capsule
+            CommandID: 328514977
+          - Name: play_sound_area
+            CommandID: 2282518931
+          - Name: play_sound_cone
+            CommandID: 3529678057
+          - Name: play_sound_cone_top
+            CommandID: 869987275
+          - Name: play_sound_cube
+            CommandID: 1869018435
+          - Name: play_sound_sphere
+            CommandID: 3540026592
+      - Name: Player
+        Children:
+          - Name: play_footstep
+            CommandID: 1380072722
+      - Name: Tests
+        Children:
+          - Name: play_test_01
+            CommandID: 406528143
+          - Name: play_test_02
+            CommandID: 2167566645
+          - Name: play_test_03
+            CommandID: 4130685347
+          - Name: play_test_04
+            CommandID: 1750193152
+          - Name: play_test_05
+            CommandID: 525788310
+          - Name: spatializer_stress
+            CommandID: 3284180301
+      - Name: pause_sound
+        CommandID: 697397569
+      - Name: play_component
+        CommandID: 2129497354
+      - Name: play_nonsoundgraph
+        CommandID: 2415408482
+      - Name: play_sound
+        CommandID: 156312632
+      - Name: play_sound2
+        CommandID: 853432247
+      - Name: play_soundgraph
+        CommandID: 200814908
+      - Name: resume_sound
+        CommandID: 1685652460
+      - Name: spread_focus_test
+        CommandID: 3853370519
+      - Name: stop_component
+        CommandID: 2129932541
+      - Name: stop_object
+        CommandID: 278785032
+      - Name: stop_sound
+        CommandID: 1970022579

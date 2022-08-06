@@ -1,0 +1,46 @@
+Assets:
+  - Handle: 604118396532717662
+    FilePath: Meshes/Default/Cube.fbx
+    Type: MeshSource
+  - Handle: 978191657253199515
+    FilePath: Meshes/Default/Capsule.hsmesh
+    Type: StaticMesh
+  - Handle: 3494687333460118562
+    FilePath: Meshes/Default/Torus.fbx
+    Type: MeshSource
+  - Handle: 3578266500375627797
+    FilePath: Materials/Terrain.hmaterial
+    Type: Material
+  - Handle: 6600968962491890910
+    FilePath: Materials/coob.hmaterial
+    Type: Material
+  - Handle: 7095044782719419806
+    FilePath: Scenes/Test.hscene
+    Type: Scene
+  - Handle: 7627640941465269972
+    FilePath: Meshes/Default/Sphere.hsmesh
+    Type: StaticMesh
+  - Handle: 9598393432543486753
+    FilePath: Meshes/Default/Cylinder.fbx
+    Type: MeshSource
+  - Handle: 10105918523685638365
+    FilePath: Meshes/Default/Plane.fbx
+    Type: MeshSource
+  - Handle: 10193714256902934296
+    FilePath: Meshes/Default/Cone.fbx
+    Type: MeshSource
+  - Handle: 11391363654727571520
+    FilePath: Meshes/Default/Capsule.fbx
+    Type: MeshSource
+  - Handle: 12119051964915306382
+    FilePath: Meshes/Default/Sphere.fbx
+    Type: MeshSource
+  - Handle: 15232084394035638090
+    FilePath: Prefabs/GameManager.hprefab
+    Type: Prefab
+  - Handle: 15434794342408240744
+    FilePath: Meshes/Default/Cube.hsmesh
+    Type: StaticMesh
+  - Handle: 17018305255244772279
+    FilePath: Materials/Player.hmaterial
+    Type: Material

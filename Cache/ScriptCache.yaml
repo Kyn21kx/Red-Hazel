@@ -1,0 +1,240 @@
+ScriptCache:
+  Classes:
+    - ClassID: 337232165
+      Name: Auxiliars.TimeMode
+      ParentID: 336772613
+      Abstract: false
+      FieldData:
+        - ID: 303757046
+          Name: Auxiliars.TimeMode:value__
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 4
+    - ClassID: 4172017631
+      Name: Auxiliars.TimeScaleMode
+      ParentID: 336772613
+      Abstract: false
+      FieldData:
+        - ID: 3711934184
+          Name: Auxiliars.TimeScaleMode:value__
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 4
+    - ClassID: 3131055995
+      Name: Auxiliars.SpartanTimer
+      ParentID: 47527709
+      Abstract: false
+      FieldData:
+        - ID: 3047414435
+          Name: Auxiliars.SpartanTimer:SCALING_VALUES
+          DisplayName: ""
+          TypeEncoding: 29
+          NativeType: 9
+          Flags: 8
+        - ID: 3221930612
+          Name: Auxiliars.SpartanTimer:startingTime
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 8
+    - ClassID: 3383057023
+      Name: RedBloodHood.DashControl
+      ParentID: 2226106790
+      Abstract: false
+      FieldData:
+        - ID: 3454381800
+          Name: RedBloodHood.DashControl:dashSpeed
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 2640456224
+          Name: RedBloodHood.DashControl:dashCooldown
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 3468672735
+          Name: RedBloodHood.DashControl:dashDuration
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 2386597738
+          Name: RedBloodHood.DashControl:dashedAirbone
+          DisplayName: ""
+          TypeEncoding: 2
+          NativeType: 0
+          Flags: 8
+    - ClassID: 3636290106
+      Name: RedBloodHood.CameraFollow
+      ParentID: 2226106790
+      Abstract: false
+      FieldData:
+        - ID: 3364173372
+          Name: RedBloodHood.CameraFollow:followSpeed
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 3038118874
+          Name: RedBloodHood.CameraFollow:followingBlend
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 3115020565
+          Name: RedBloodHood.CameraFollow:offset
+          DisplayName: ""
+          TypeEncoding: 17
+          NativeType: 13
+          Flags: 4
+        - ID: 589031391
+          Name: RedBloodHood.CameraFollow:center
+          DisplayName: ""
+          TypeEncoding: 17
+          NativeType: 13
+          Flags: 4
+        - ID: 1649923924
+          Name: RedBloodHood.CameraFollow:deadZone
+          DisplayName: ""
+          TypeEncoding: 17
+          NativeType: 13
+          Flags: 4
+        - ID: 1051509167
+          Name: RedBloodHood.CameraFollow:target
+          DisplayName: ""
+          TypeEncoding: 18
+          NativeType: 17
+          Flags: 4
+        - ID: 375028644
+          Name: RedBloodHood.CameraFollow:useFakeInterpolation
+          DisplayName: ""
+          TypeEncoding: 2
+          NativeType: 0
+          Flags: 4
+        - ID: 4104151613
+          Name: RedBloodHood.CameraFollow:height
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 8
+        - ID: 623391364
+          Name: RedBloodHood.CameraFollow:exponentFactor
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 3243959054
+          Name: RedBloodHood.CameraFollow:child
+          DisplayName: ""
+          TypeEncoding: 18
+          NativeType: 17
+          Flags: 8
+        - ID: 222247248
+          Name: RedBloodHood.CameraFollow:fullyRecenter
+          DisplayName: ""
+          TypeEncoding: 2
+          NativeType: 0
+          Flags: 4
+        - ID: 3731918517
+          Name: RedBloodHood.CameraFollow:following
+          DisplayName: ""
+          TypeEncoding: 2
+          NativeType: 0
+          Flags: 8
+        - ID: 723722673
+          Name: RedBloodHood.CameraFollow:initialDistance
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 8
+        - ID: 1544322439
+          Name: RedBloodHood.CameraFollow:enabled
+          DisplayName: ""
+          TypeEncoding: 2
+          NativeType: 0
+          Flags: 4
+    - ClassID: 1196690083
+      Name: RedBloodHood.Movement
+      ParentID: 2226106790
+      Abstract: false
+      FieldData:
+        - ID: 291418393
+          Name: RedBloodHood.Movement:movementVector
+          DisplayName: ""
+          TypeEncoding: 17
+          NativeType: 12
+          Flags: 8
+        - ID: 3609468036
+          Name: RedBloodHood.Movement:speed
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 2710493863
+          Name: RedBloodHood.Movement:HORIZONTAL
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 8
+        - ID: 2603931029
+          Name: RedBloodHood.Movement:VERTICAL
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 8
+        - ID: 460724855
+          Name: RedBloodHood.Movement:FIXED_SPEED_FACTOR
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 8
+        - ID: 1007214441
+          Name: RedBloodHood.Movement:runningSpeed
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+    - ClassID: 3479499306
+      Name: RedBloodHood.Auxiliars.EntityFetcher
+      ParentID: 0
+      Abstract: true
+      FieldData:
+        []
+    - ClassID: 766918227
+      Name: RedBloodHood.Auxiliars.GameManager
+      ParentID: 2226106790
+      Abstract: false
+      FieldData:
+        []
+    - ClassID: 74610115
+      Name: RedBloodHood.Auxiliars.SpartanMath
+      ParentID: 0
+      Abstract: true
+      FieldData:
+        []
+    - ClassID: 1519920679
+      Name: RedBloodHood.CameraFollow/FollowMode
+      ParentID: 336772613
+      Abstract: false
+      FieldData:
+        - ID: 3433990576
+          Name: RedBloodHood.CameraFollow/FollowMode:value__
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 4
+    - ClassID: 3809606570
+      Name: RedBloodHood.CameraFollow/UpdateModes
+      ParentID: 336772613
+      Abstract: false
+      FieldData:
+        - ID: 2692984681
+          Name: RedBloodHood.CameraFollow/UpdateModes:value__
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 4

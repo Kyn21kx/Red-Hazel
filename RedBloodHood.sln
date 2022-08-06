@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBloodHood", "Assets\Scripts\RedBloodHood.csproj", "{5ABCCD56-461F-5DFB-EFA4-95B1DBE6287E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hazel", "Hazel", "{60928A16-CC47-030C-553C-FDE2C1F0F90F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hazel-ScriptCore", "X:\HazelEngine\Unstable-Version\Hazel-dev\Hazel-ScriptCore\Hazel-ScriptCore.csproj", "{6432FCE0-502B-1B33-795D-00B865B5FA3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Dist|Any CPU = Dist|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ABCCD56-461F-5DFB-EFA4-95B1DBE6287E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ABCCD56-461F-5DFB-EFA4-95B1DBE6287E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ABCCD56-461F-5DFB-EFA4-95B1DBE6287E}.Dist|Any CPU.ActiveCfg = Dist|Any CPU
+		{5ABCCD56-461F-5DFB-EFA4-95B1DBE6287E}.Dist|Any CPU.Build.0 = Dist|Any CPU
+		{5ABCCD56-461F-5DFB-EFA4-95B1DBE6287E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ABCCD56-461F-5DFB-EFA4-95B1DBE6287E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6432FCE0-502B-1B33-795D-00B865B5FA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6432FCE0-502B-1B33-795D-00B865B5FA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6432FCE0-502B-1B33-795D-00B865B5FA3E}.Dist|Any CPU.ActiveCfg = Dist|Any CPU
+		{6432FCE0-502B-1B33-795D-00B865B5FA3E}.Dist|Any CPU.Build.0 = Dist|Any CPU
+		{6432FCE0-502B-1B33-795D-00B865B5FA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6432FCE0-502B-1B33-795D-00B865B5FA3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6432FCE0-502B-1B33-795D-00B865B5FA3E} = {60928A16-CC47-030C-553C-FDE2C1F0F90F}
+	EndGlobalSection
+EndGlobal
