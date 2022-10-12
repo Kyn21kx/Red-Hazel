@@ -54,6 +54,7 @@ namespace RedBloodHood {
 		private float initialDistance;
 
 		protected override void OnCreate() {
+			EntityFetcher.mainCam = this.GetComponent<CameraComponent>();
 			if (!enabled) return;
 			//Right here we set an initial offset that will be used to maintain the distance relative to the player
 			followingBlend = 0f;

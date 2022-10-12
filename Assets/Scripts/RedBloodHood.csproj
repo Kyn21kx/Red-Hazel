@@ -25,6 +25,7 @@
     </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,6 +39,7 @@
     </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Dist|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,6 +53,7 @@
     </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <Reference Include="System.Collections.Immutable" />
@@ -345,7 +348,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source\Auxiliars\EntityFetcher.cs" />
-    <Compile Include="Source\Auxiliars\GameManager.cs" />
+    <Compile Include="Source\Auxiliars\Managers\GameManager.cs" />
+    <Compile Include="Source\Auxiliars\Managers\InputManager.cs" />
+    <Compile Include="Source\Auxiliars\SpartanMemory.cs" />
+    <Compile Include="Source\Enemies\EnemyBehaviour.cs" />
+    <Compile Include="Source\Player\Combat.cs" />
     <Compile Include="Source\Player\DashControl.cs" />
     <Compile Include="Source\Auxiliars\SpartanMath.cs" />
     <Compile Include="Source\Auxiliars\SpartanTimer.cs" />
@@ -357,6 +364,9 @@
       <Project>{6432FCE0-502B-1B33-795D-00B865B5FA3E}</Project>
       <Name>Hazel-ScriptCore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

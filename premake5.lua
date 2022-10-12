@@ -1,4 +1,4 @@
-FileVersion = 1.1
+FileVersion = 1.2
 
 HazelRootDirectory = os.getenv("HAZEL_DIR")
 include (path.join(HazelRootDirectory, "Hazelnut", "Resources", "LUA", "Hazel.lua"))
@@ -45,7 +45,6 @@ project "Hazel-ScriptCore"
 group ""
 
 project "RedBloodHood"
-	location "Assets/Scripts"
 	kind "SharedLib"
 	language "C#"
 	dotnetframework "4.7.2"
@@ -56,7 +55,7 @@ project "RedBloodHood"
 
 	files 
 	{
-		"Assets/Scripts/Source/**.cs", 
+		"Assets/**.cs", 
 	}
 
 	linkAppReferences()

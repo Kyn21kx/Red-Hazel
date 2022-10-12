@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBloodHood", "Assets\Scripts\RedBloodHood.csproj", "{5ABCCD56-461F-5DFB-EFA4-95B1DBE6287E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBloodHood", "RedBloodHood.csproj", "{5ABCCD56-461F-5DFB-EFA4-95B1DBE6287E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hazel", "Hazel", "{60928A16-CC47-030C-553C-FDE2C1F0F90F}"
 EndProject

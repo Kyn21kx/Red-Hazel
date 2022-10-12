@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Hazel;
+using RedBloodHood.Auxiliars;
+using RedBloodHood.Source.Auxiliars;
 
 namespace RedBloodHood {
 	public class Movement : Entity {
@@ -15,15 +17,20 @@ namespace RedBloodHood {
 		public Vector2 PreviousDirection { get; private set; }
 		public float speed = 10f;
 		public float runningSpeed = 20f;
+		public float inputSmoothingLevel = 1E3f;
+		public float deadzone = 0.1f;
 		private const float FIXED_SPEED_FACTOR = 10f;
 		public RigidBodyComponent Rigidbody { get; private set; }
 		public bool IsRunning { get; private set; }
 		public DashControl dashRef;
+		//TODO: Maybe make this an enum as StirState { FREE, LOCKED, etc }
+		public bool CanStir { get; set; }
 
 		protected override void OnCreate() {
 			movementVector = Vector2.Zero;
 			this.PreviousDirection = Vector2.Right;
 			this.Rigidbody = GetComponent<RigidBodyComponent>();
+			this.CanStir = true;
 		}
 
 		protected override void OnUpdate(float ts) {
@@ -33,28 +40,31 @@ namespace RedBloodHood {
 
 		protected override void OnPhysicsUpdate(float ts) {
 			base.OnPhysicsUpdate(ts);
-			Move();
+			if (CanStir)
+				Move();
 			this.dashRef.ParentPhysicsUpdate();
 		}
 
 		private void HandleInput() {
 			//If controller
-			this.movementVector.X = GetAxis(HORIZONTAL);
-			this.movementVector.Y = GetAxis(VERTICAL);
+			this.movementVector.X = InputManager.GetAxisRaw(HORIZONTAL);
+			this.movementVector.Y = -InputManager.GetAxisRaw(VERTICAL);
 			//Keyboard input for movement
 			if (Input.IsKeyDown(KeyCode.W))
-				this.movementVector.Y++;
-			if (Input.IsKeyDown(KeyCode.S))
 				this.movementVector.Y--;
+			if (Input.IsKeyDown(KeyCode.S))
+				this.movementVector.Y++;
 
 			if (Input.IsKeyDown(KeyCode.A))
-				this.movementVector.X++;
-			if (Input.IsKeyDown(KeyCode.D))
 				this.movementVector.X--;
+			if (Input.IsKeyDown(KeyCode.D))
+				this.movementVector.X++;
 
 			IsRunning = Input.IsKeyHeld(KeyCode.LeftShift);
 
 			this.movementVector.Clamp(Vector2.MinusFull, Vector2.Full);
+			if (this.movementVector.Length() < deadzone)
+				this.movementVector = Vector2.Zero;
 		}
 
 		private void Move() {
@@ -66,10 +76,7 @@ namespace RedBloodHood {
 			this.Rigidbody.LinearVelocity = finalVector;
 		}
 
-		private float GetAxis(int axis, float deadzone = 0.2f) {
-			float value = Input.GetControllerAxis(0, axis);
-			return Mathf.Abs(value) < deadzone ? 0.0f : value;
-		}
+
 
 	}
 }

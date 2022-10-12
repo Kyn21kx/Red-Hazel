@@ -1,7 +1,9 @@
 ﻿using Hazel;
 using Auxiliars;
+using RedBloodHood.Source.Auxiliars;
 
 namespace RedBloodHood {
+
 	public class DashControl : Entity {
 
 		public float dashSpeed;
@@ -17,6 +19,13 @@ namespace RedBloodHood {
 
 		private SpartanTimer dashTimer;
 		private SpartanTimer dashDurationTimer;
+
+		//This enum is just for readability
+		public enum ExternalDashResults {
+			INTERNAL = 0,
+			EXTERNAL_SUCCESS = 1,
+			EXTERNAL_FAILURE = -1
+		};
 
 		protected override void OnCreate() {
 			var thing = this.Parent.GetComponent<ScriptComponent>();
@@ -39,29 +48,59 @@ namespace RedBloodHood {
 		}
 
 		private void HandleInput() {
-			if (Input.IsKeyPressed(KeyCode.Space) && AbleToDash()) {
+			if (SentDashSignal() && AbleToDash(this.dashTimer, this.dashDurationTimer, this.dashCooldown))
 				dashDurationTimer.Start();
-			}
+		}
+
+		private bool SentDashSignal() {
+			return Input.IsKeyPressed(KeyCode.Space) || InputManager.ControllerButtonPressed(GamepadButton.A);
 		}
 
 		private void Dash() {
-			float currTime = dashDurationTimer.GetCurrentTime(TimeScaleMode.Seconds);
+			this.Dash(this.dashSpeed, this.dashDuration, this.dashCooldown, ref this.dashTimer, ref this.dashDurationTimer);
+		}
+
+		public bool Dash(float dashSpeed, float dashDuration, float cooldown, ref SpartanTimer cooldownTimer, ref SpartanTimer durationTimer) {
+			ExternalDashResults dashTriggerState = HandleExternalTriggers(cooldownTimer, ref durationTimer, cooldown);
+
+			//The trigger was external, but, we were not able to dash (see AbleToDash func)
+			if (dashTriggerState == ExternalDashResults.EXTERNAL_FAILURE) return false;
+
+			float currTime = durationTimer.GetCurrentTime(TimeScaleMode.Seconds);
+			Log.Debug($"Current dashing time: {currTime}");
 			if (currTime >= dashDuration) {
-				dashDurationTimer.Stop();
+				durationTimer.Stop();
 				//this.dashedAirbone = !movRef.Grounded;
-				dashTimer.Reset();
-				return;
+				cooldownTimer.Reset();
+				this.movRef.CanStir = true;
+				return false;
 			}
-			//movRef.Rigidbody.AddForce(Vector3.Right * SpartanMath.Sign(movRef.PrevDirection) * dashSpeed * 10f * ts, ForceMode.VelocityChange);
 			Vector3 forceDirection = new Vector3(this.movRef.PreviousDirection.X, 0f, this.movRef.PreviousDirection.Y);
 			const float DASH_BOOST_FACTOR = 10f;
 			movRef.Rigidbody.AddForce(forceDirection * dashSpeed * Time.FixedDeltaTime * DASH_BOOST_FACTOR, ForceMode.VelocityChange);
+			this.movRef.CanStir = false;
+			return true;
 		}
 
-		public bool AbleToDash() {
-			if (!dashTimer.Started) return true;
-			float timePassed = dashTimer.GetCurrentTime(TimeScaleMode.Seconds);
-			return (timePassed >= dashCooldown && !dashDurationTimer.Started);
+		public bool AbleToDash(SpartanTimer cooldownTimer, SpartanTimer durationTimer, float cooldown) {
+			if (!cooldownTimer.Started) return true;
+			float timePassed = cooldownTimer.GetCurrentTime(TimeScaleMode.Seconds);
+			Log.Debug($"Cooldown: {timePassed}");
+			return (timePassed >= cooldown && !durationTimer.Started);
+		}
+
+		private ExternalDashResults HandleExternalTriggers(SpartanTimer cooldownTimer, ref SpartanTimer durationTimer, float cooldown) {
+			//So, if the dash timer has not been started
+			if (!durationTimer.Started) {
+				//We verify if we can dash or not
+				if (!this.AbleToDash(cooldownTimer, durationTimer, cooldown))
+					return ExternalDashResults.EXTERNAL_FAILURE;
+				
+				//We start the dash timer
+				durationTimer.Start();
+				return ExternalDashResults.EXTERNAL_SUCCESS;
+			}
+			return ExternalDashResults.INTERNAL;
 		}
 
 	}

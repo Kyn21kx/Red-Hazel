@@ -38,3 +38,6 @@ X:\HazelProjects\RedBloodHood\RedBloodHood\Assets\Scripts\Binaries\System.Web.We
 X:\HazelProjects\RedBloodHood\RedBloodHood\Assets\Scripts\Binaries\System.Web.WebPages.dll
 X:\HazelProjects\RedBloodHood\RedBloodHood\Assets\Scripts\Binaries\System.Web.WebPages.Razor.dll
 X:\HazelProjects\RedBloodHood\RedBloodHood\Assets\Scripts\Binaries\Microsoft.Web.Infrastructure.dll
+X:\HazelProjects\RedBloodHood\RedBloodHood\Assets\Scripts\Binaries\RedBloodHood.dll.config
+X:\HazelProjects\RedBloodHood\RedBloodHood\Assets\Scripts\Binaries\System.Buffers.dll
+X:\HazelProjects\RedBloodHood\RedBloodHood\Assets\Scripts\Binaries\Hazel-ScriptCore.dll.config

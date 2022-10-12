@@ -39,35 +39,6 @@ ScriptCache:
           TypeEncoding: 12
           NativeType: 9
           Flags: 8
-    - ClassID: 3383057023
-      Name: RedBloodHood.DashControl
-      ParentID: 2226106790
-      Abstract: false
-      FieldData:
-        - ID: 3454381800
-          Name: RedBloodHood.DashControl:dashSpeed
-          DisplayName: ""
-          TypeEncoding: 12
-          NativeType: 9
-          Flags: 4
-        - ID: 2640456224
-          Name: RedBloodHood.DashControl:dashCooldown
-          DisplayName: ""
-          TypeEncoding: 12
-          NativeType: 9
-          Flags: 4
-        - ID: 3468672735
-          Name: RedBloodHood.DashControl:dashDuration
-          DisplayName: ""
-          TypeEncoding: 12
-          NativeType: 9
-          Flags: 4
-        - ID: 2386597738
-          Name: RedBloodHood.DashControl:dashedAirbone
-          DisplayName: ""
-          TypeEncoding: 2
-          NativeType: 0
-          Flags: 8
     - ClassID: 3636290106
       Name: RedBloodHood.CameraFollow
       ParentID: 2226106790
@@ -157,6 +128,140 @@ ScriptCache:
           TypeEncoding: 2
           NativeType: 0
           Flags: 4
+    - ClassID: 3700892401
+      Name: RedBloodHood.EnemyBehaviour
+      ParentID: 2226106790
+      Abstract: false
+      FieldData:
+        - ID: 2200452207
+          Name: RedBloodHood.EnemyBehaviour:health
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 4
+        - ID: 1165893188
+          Name: RedBloodHood.EnemyBehaviour:matReference
+          DisplayName: ""
+          TypeEncoding: 18
+          NativeType: 20
+          Flags: 8
+        - ID: 286194703
+          Name: RedBloodHood.EnemyBehaviour:VFX_FLASH_TIME_MS
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 8
+    - ClassID: 3480346284
+      Name: RedBloodHood.Combat
+      ParentID: 2226106790
+      Abstract: false
+      FieldData:
+        - ID: 1379521961
+          Name: RedBloodHood.Combat:attackDamage
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 4
+        - ID: 1948242652
+          Name: RedBloodHood.Combat:attackRadius
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 634307835
+          Name: RedBloodHood.Combat:mouseDirectionOffset
+          DisplayName: ""
+          TypeEncoding: 17
+          NativeType: 12
+          Flags: 4
+        - ID: 530008975
+          Name: RedBloodHood.Combat:attackDebugger
+          DisplayName: ""
+          TypeEncoding: 18
+          NativeType: 16
+          Flags: 4
+        - ID: 1558612676
+          Name: RedBloodHood.Combat:playerRef
+          DisplayName: ""
+          TypeEncoding: 18
+          NativeType: 17
+          Flags: 8
+        - ID: 2295142123
+          Name: RedBloodHood.Combat:debugger
+          DisplayName: ""
+          TypeEncoding: 18
+          NativeType: 17
+          Flags: 8
+        - ID: 10156077
+          Name: RedBloodHood.Combat:attackCooldown
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 1107116951
+          Name: RedBloodHood.Combat:attackAngle
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 356808277
+          Name: RedBloodHood.Combat:shortLeapTime
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 4060808403
+          Name: RedBloodHood.Combat:shortLeapSpeed
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+    - ClassID: 3383057023
+      Name: RedBloodHood.DashControl
+      ParentID: 2226106790
+      Abstract: false
+      FieldData:
+        - ID: 3454381800
+          Name: RedBloodHood.DashControl:dashSpeed
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 2640456224
+          Name: RedBloodHood.DashControl:dashCooldown
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 3468672735
+          Name: RedBloodHood.DashControl:dashDuration
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 2386597738
+          Name: RedBloodHood.DashControl:dashedAirbone
+          DisplayName: ""
+          TypeEncoding: 2
+          NativeType: 0
+          Flags: 8
+    - ClassID: 405709476
+      Name: RedBloodHood.HookControl
+      ParentID: 2226106790
+      Abstract: false
+      FieldData:
+        - ID: 2412857995
+          Name: RedBloodHood.HookControl:maximumRange
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 1300844739
+          Name: RedBloodHood.HookControl:throwingSpeed
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
     - ClassID: 1196690083
       Name: RedBloodHood.Movement
       ParentID: 2226106790
@@ -198,6 +303,30 @@ ScriptCache:
           TypeEncoding: 12
           NativeType: 9
           Flags: 4
+        - ID: 1250632465
+          Name: RedBloodHood.Movement:inputSmoothingLevel
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 3646594579
+          Name: RedBloodHood.Movement:deadzone
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+    - ClassID: 2825862062
+      Name: RedBloodHood.Source.Auxiliars.InputManager
+      ParentID: 0
+      Abstract: false
+      FieldData:
+        []
+    - ClassID: 962651521
+      Name: RedBloodHood.Source.Auxiliars.SpartanMemory
+      ParentID: 0
+      Abstract: true
+      FieldData:
+        []
     - ClassID: 3479499306
       Name: RedBloodHood.Auxiliars.EntityFetcher
       ParentID: 0
@@ -209,7 +338,18 @@ ScriptCache:
       ParentID: 2226106790
       Abstract: false
       FieldData:
-        []
+        - ID: 4291231978
+          Name: RedBloodHood.Auxiliars.GameManager:pluggedControllerID
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 8
+        - ID: 3383861138
+          Name: RedBloodHood.Auxiliars.GameManager:isFirstFrame
+          DisplayName: ""
+          TypeEncoding: 2
+          NativeType: 0
+          Flags: 8
     - ClassID: 74610115
       Name: RedBloodHood.Auxiliars.SpartanMath
       ParentID: 0
@@ -234,6 +374,28 @@ ScriptCache:
       FieldData:
         - ID: 2692984681
           Name: RedBloodHood.CameraFollow/UpdateModes:value__
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 4
+    - ClassID: 1954038183
+      Name: RedBloodHood.DashControl/ExternalDashResults
+      ParentID: 336772613
+      Abstract: false
+      FieldData:
+        - ID: 944149808
+          Name: RedBloodHood.DashControl/ExternalDashResults:value__
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 4
+    - ClassID: 3566977978
+      Name: RedBloodHood.Source.Auxiliars.InputManager/ControllerAxis
+      ParentID: 336772613
+      Abstract: false
+      FieldData:
+        - ID: 1232514649
+          Name: RedBloodHood.Source.Auxiliars.InputManager/ControllerAxis:value__
           DisplayName: ""
           TypeEncoding: 8
           NativeType: 3

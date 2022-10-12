@@ -1,0 +1,18 @@
+Prefab:
+  - Entity: 11753680458640896987
+    TagComponent:
+      Tag: AttackDebugger
+    Parent: 0
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 11708704133458338302
+      Entity: 11753680458640896987
+    TransformComponent:
+      Position: [-4.84152222, 2.20594478, 0]
+      Rotation: [0, 0, 0]
+      Scale: [100, 100, 100]
+    StaticMeshComponent:
+      AssetID: 7627640941465269972
+      MaterialTable:
+        0: 0
