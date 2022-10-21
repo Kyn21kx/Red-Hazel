@@ -356,6 +356,7 @@
     <Compile Include="Assets\Scripts\Source\Auxiliars\SpartanTimer.cs" />
     <Compile Include="Assets\Scripts\Source\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Source\Enemies\EnemyBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Source\Player\AxeControl.cs" />
     <Compile Include="Assets\Scripts\Source\Player\Combat.cs" />
     <Compile Include="Assets\Scripts\Source\Player\DashControl.cs" />
     <Compile Include="Assets\Scripts\Source\Player\HookControl.cs" />

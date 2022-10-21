@@ -22,6 +22,10 @@ namespace RedBloodHood.Source.Auxiliars {
 			return Input.SpartanGetControllerAxis(controllerId, axis);
 		}
 
+		public static float GetAxisRaw(GamepadAxis axis, int controllerId = 0) {
+			return Input.SpartanGetControllerAxis(controllerId, (int)axis);
+		}
+
 		public static float GetAxis(int axis, float speed, int controllerId = 0) {
 			float rawValue = Input.SpartanGetControllerAxis(controllerId, axis);
 			float smoothedValue = EaseAxis(rawValue, speed);

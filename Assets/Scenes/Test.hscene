@@ -1,5 +1,35 @@
 Scene: Test
 Entities:
+  - Entity: 1443634143561512705
+    TagComponent:
+      Tag: CorrectedAxe
+    Parent: 3519628146629578551
+    Children:
+      - Handle: 12038497903216479726
+      - Handle: 10930670778954697786
+    TransformComponent:
+      Position: [0.300000012, 0, 0]
+      Rotation: [0, 1.57079637, 0]
+      Scale: [0.249999866, 0.25, 0.249999866]
+    ScriptComponent:
+      ClassHandle: 1565428759
+      StoredFields:
+        - ID: 1452269052
+          Name: RedBloodHood.AxeControl:travelSpeed
+          Type: 12
+          Data: 0
+        - ID: 2737521458
+          Name: RedBloodHood.AxeControl:travelDistance
+          Type: 12
+          Data: 0
+        - ID: 2689114314
+          Name: RedBloodHood.AxeControl:travelDirection
+          Type: 17
+          Data: [0, 0, 0]
+        - ID: 114109024
+          Name: RedBloodHood.AxeControl:initialPosition
+          Type: 17
+          Data: [0, 0, 0]
   - Entity: 2495887542284793708
     TagComponent:
       Tag: Ground
@@ -26,7 +56,7 @@ Entities:
     Children:
       []
     TransformComponent:
-      Position: [-3.41127753, 2.49922633, -1.52874899]
+      Position: [0, 0, 0]
       Rotation: [0, -0, 0]
       Scale: [0.0119189518, 0.0119189499, 0.0119189499]
     ScriptComponent:
@@ -126,6 +156,7 @@ Entities:
       - Handle: 3137129045285808141
       - Handle: 11065823829128563793
       - Handle: 9107258300217307532
+      - Handle: 1443634143561512705
     TransformComponent:
       Position: [0, 0, 0]
       Rotation: [0, 0, 0]
@@ -223,13 +254,51 @@ Entities:
     Children:
       []
     TransformComponent:
-      Position: [-1.00084257, 0, 0]
+      Position: [0, 0, 0]
       Rotation: [0, 0, 0]
-      Scale: [1.04436028, 0.0554181896, 0.063528724]
-    StaticMeshComponent:
-      AssetID: 12749102643967433108
+      Scale: [1, 1, 1]
+    ScriptComponent:
+      ClassHandle: 405709476
+      StoredFields:
+        - ID: 2412857995
+          Name: RedBloodHood.HookControl:maximumRange
+          Type: 12
+          Data: 10
+        - ID: 1300844739
+          Name: RedBloodHood.HookControl:throwingSpeed
+          Type: 12
+          Data: 10
+        - ID: 1339570591
+          Name: RedBloodHood.HookControl:aimGuide
+          Type: 18
+          Data: 14137003454334915662
+        - ID: 2490120729
+          Name: RedBloodHood.HookControl:aimGuidePrefab
+          Type: 18
+          Data: 5504911938019520580
+        - ID: 1936795574
+          Name: RedBloodHood.HookControl:aimGuideInstance
+          Type: 18
+          Data: 0
+        - ID: 3458968853
+          Name: RedBloodHood.HookControl:axeReference
+          Type: 18
+          Data: 1443634143561512705
+  - Entity: 10930670778954697786
+    TagComponent:
+      Tag: Axehead
+    Parent: 1443634143561512705
+    Children:
+      []
+    TransformComponent:
+      Position: [0.0463938862, 0, 0.0281431787]
+      Rotation: [0, -0, 0]
+      Scale: [1, 1, 1]
+    MeshComponent:
+      AssetID: 11620157491620742781
+      SubmeshIndex: 1
       MaterialTable:
-        0: 0
+        0: 9322701016441271232
   - Entity: 11065823829128563793
     TagComponent:
       Tag: Camera
@@ -316,7 +385,7 @@ Entities:
     Children:
       []
     TransformComponent:
-      Position: [-3.4197166, 2.46943808, -1.51052785]
+      Position: [0, 0, 0]
       Rotation: [0, -0, 0]
       Scale: [0.0119189518, 0.0119189499, 0.0119189499]
     ScriptComponent:
@@ -325,7 +394,7 @@ Entities:
         - ID: 3454381800
           Name: RedBloodHood.DashControl:dashSpeed
           Type: 12
-          Data: 90
+          Data: 180
         - ID: 2640456224
           Name: RedBloodHood.DashControl:dashCooldown
           Type: 12
@@ -338,6 +407,21 @@ Entities:
           Name: RedBloodHood.DashControl:dashedAirbone
           Type: 2
           Data: false
+  - Entity: 12038497903216479726
+    TagComponent:
+      Tag: Handle001
+    Parent: 1443634143561512705
+    Children:
+      []
+    TransformComponent:
+      Position: [0.0463938862, 0, 0.0281431787]
+      Rotation: [0, -0, 0]
+      Scale: [1, 1, 1]
+    MeshComponent:
+      AssetID: 11620157491620742781
+      SubmeshIndex: 0
+      MaterialTable:
+        0: 9792102105927426289
   - Entity: 13435877116302467405
     TagComponent:
       Tag: LeftWall

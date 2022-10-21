@@ -1,0 +1,31 @@
+Prefab:
+  - Entity: 9689545171520682967
+    TagComponent:
+      Tag: Aim guide
+    Parent: 17126044563145252890
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 67938849882344485
+      Entity: 9689545171520682967
+    TransformComponent:
+      Position: [-1.27923822, 0, 0]
+      Rotation: [0, -0, 0]
+      Scale: [1.04436028, 0.0554181896, 0.063528724]
+    StaticMeshComponent:
+      AssetID: 12749102643967433108
+      MaterialTable:
+        0: 10859372873259754079
+  - Entity: 17126044563145252890
+    TagComponent:
+      Tag: Pivot
+    Parent: 0
+    Children:
+      - Handle: 9689545171520682967
+    PrefabComponent:
+      Prefab: 67938849882344485
+      Entity: 17126044563145252890
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]

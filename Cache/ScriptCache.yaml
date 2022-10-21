@@ -151,6 +151,35 @@ ScriptCache:
           TypeEncoding: 12
           NativeType: 9
           Flags: 8
+    - ClassID: 1565428759
+      Name: RedBloodHood.AxeControl
+      ParentID: 2226106790
+      Abstract: false
+      FieldData:
+        - ID: 1452269052
+          Name: RedBloodHood.AxeControl:travelSpeed
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 8
+        - ID: 2737521458
+          Name: RedBloodHood.AxeControl:travelDistance
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 8
+        - ID: 2689114314
+          Name: RedBloodHood.AxeControl:travelDirection
+          DisplayName: ""
+          TypeEncoding: 17
+          NativeType: 13
+          Flags: 8
+        - ID: 114109024
+          Name: RedBloodHood.AxeControl:initialPosition
+          DisplayName: ""
+          TypeEncoding: 17
+          NativeType: 13
+          Flags: 8
     - ClassID: 3480346284
       Name: RedBloodHood.Combat
       ParentID: 2226106790
@@ -261,6 +290,30 @@ ScriptCache:
           DisplayName: ""
           TypeEncoding: 12
           NativeType: 9
+          Flags: 4
+        - ID: 1339570591
+          Name: RedBloodHood.HookControl:aimGuide
+          DisplayName: ""
+          TypeEncoding: 18
+          NativeType: 17
+          Flags: 4
+        - ID: 2490120729
+          Name: RedBloodHood.HookControl:aimGuidePrefab
+          DisplayName: ""
+          TypeEncoding: 18
+          NativeType: 16
+          Flags: 4
+        - ID: 1936795574
+          Name: RedBloodHood.HookControl:aimGuideInstance
+          DisplayName: ""
+          TypeEncoding: 18
+          NativeType: 17
+          Flags: 8
+        - ID: 3458968853
+          Name: RedBloodHood.HookControl:axeReference
+          DisplayName: ""
+          TypeEncoding: 18
+          NativeType: 17
           Flags: 4
     - ClassID: 1196690083
       Name: RedBloodHood.Movement

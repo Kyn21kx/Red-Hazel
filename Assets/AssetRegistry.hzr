@@ -26,9 +26,18 @@ Assets:
   - Handle: 4663935693105185635
     FilePath: Models/Debug/1Mcube.fbx
     Type: MeshSource
+  - Handle: 4743924267774570657
+    FilePath: Models/Placeholders/CorrectedAxe.fbx
+    Type: MeshSource
+  - Handle: 5504911938019520580
+    FilePath: Prefabs/AimGuidePivoted.hprefab
+    Type: Prefab
   - Handle: 6528103813709256420
     FilePath: Scripts/Source/Auxiliars/Managers/GameManager.cs
     Type: ScriptFile
+  - Handle: 6587927272635740660
+    FilePath: Prefabs/Aim guide.hprefab
+    Type: Prefab
   - Handle: 6600968962491890910
     FilePath: Materials/coob.hmaterial
     Type: Material
@@ -44,15 +53,24 @@ Assets:
   - Handle: 7723689725313035124
     FilePath: Scripts/Source/CameraFollow.cs
     Type: ScriptFile
+  - Handle: 8131172234562008867
+    FilePath: Models/Placeholders/Axe1.fbx
+    Type: MeshSource
   - Handle: 8947119958053742311
     FilePath: Meshes/Test/1Mcapsule.hsmesh
     Type: StaticMesh
+  - Handle: 9322701016441271232
+    FilePath: Materials/Placeholders/Axe/Blade.hmaterial
+    Type: Material
   - Handle: 9455854256380033340
     FilePath: Scripts/Source/Player/Combat.cs
     Type: ScriptFile
   - Handle: 9598393432543486753
     FilePath: Meshes/Default/Cylinder.fbx
     Type: MeshSource
+  - Handle: 9792102105927426289
+    FilePath: Materials/Placeholders/Axe/Handle.hmaterial
+    Type: Material
   - Handle: 10105918523685638365
     FilePath: Meshes/Default/Plane.fbx
     Type: MeshSource
@@ -68,12 +86,18 @@ Assets:
   - Handle: 10426279576415035272
     FilePath: Scripts/Source/Auxiliars/EntityFetcher.cs
     Type: ScriptFile
+  - Handle: 10557854086883908249
+    FilePath: Models/Placeholders/Axe1.obj
+    Type: MeshSource
   - Handle: 10859372873259754079
     FilePath: Materials/AimMaterial.hmaterial
     Type: Material
   - Handle: 11391363654727571520
     FilePath: Meshes/Default/Capsule.fbx
     Type: MeshSource
+  - Handle: 11620157491620742781
+    FilePath: Meshes/Test/CorrectedAxe.hmesh
+    Type: Mesh
   - Handle: 11708704133458338302
     FilePath: Prefabs/AttackDebugger.hprefab
     Type: Prefab
@@ -101,6 +125,9 @@ Assets:
   - Handle: 15440807347028688130
     FilePath: Materials/Wall.hmaterial
     Type: Material
+  - Handle: 16346319866677436667
+    FilePath: Scripts/Source/Player/AxeControl.cs
+    Type: ScriptFile
   - Handle: 16791076126511282200
     FilePath: Scripts/Source/Auxiliars/SpartanMemory.cs
     Type: ScriptFile

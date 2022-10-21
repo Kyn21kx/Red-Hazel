@@ -82,7 +82,7 @@ namespace RedBloodHood {
 			Vector3 destination = new Vector3(this.AttackDirection.X, 0f, this.AttackDirection.Y).Normalized() + PlayerRef.Translation;
 			destination.Y = PlayerRef.Translation.Y;
 			DebugRenderer.LineWidth = 10f;
-			DebugRenderer.DrawLine(PlayerRef.Translation, destination, Color.Black);
+			//DebugRenderer.DrawLine(PlayerRef.Translation, destination, Color.Black);
 		}
 
 		private void TriggerAttack() {

@@ -1,0 +1,18 @@
+Prefab:
+  - Entity: 1787540179583454675
+    TagComponent:
+      Tag: Aim guide
+    Parent: 0
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 6587927272635740660
+      Entity: 1787540179583454675
+    TransformComponent:
+      Position: [-1.27923822, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1.04436028, 0.0554181896, 0.063528724]
+    StaticMeshComponent:
+      AssetID: 12749102643967433108
+      MaterialTable:
+        0: 10859372873259754079
