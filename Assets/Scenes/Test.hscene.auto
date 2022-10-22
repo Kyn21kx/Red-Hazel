@@ -26,6 +26,20 @@ Entities:
           Name: RedBloodHood.AxeControl:travelDirection
           Type: 17
           Data: [0, 0, 0]
+        - ID: 114109024
+          Name: RedBloodHood.AxeControl:initialPosition
+          Type: 17
+          Data: [0, 0, 0]
+  - Entity: 1705502273930568571
+    TagComponent:
+      Tag: TestingManager
+    Parent: 0
+    Children:
+      - Handle: 14675989484783329521
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
   - Entity: 2495887542284793708
     TagComponent:
       Tag: Ground
@@ -97,7 +111,7 @@ Entities:
         - ID: 4060808403
           Name: RedBloodHood.Combat:shortLeapSpeed
           Type: 12
-          Data: 45.4544983
+          Data: 90
   - Entity: 3431692579697236680
     TagComponent:
       Tag: EnemyTest
@@ -243,6 +257,23 @@ Entities:
       IsKinematic: true
       CollisionDetection: 0
       LockFlags: "\x00"
+  - Entity: 5371678211054418339
+    TagComponent:
+      Tag: TimerTest
+    Parent: 14675989484783329521
+    Children:
+      []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, -0, 0]
+      Scale: [1, 1, 1]
+    ScriptComponent:
+      ClassHandle: 1632802572
+      StoredFields:
+        - ID: 976394032
+          Name: RedBloodHood.SpartanTimerTest:realTimeSeconds
+          Type: 8
+          Data: 0
   - Entity: 9107258300217307532
     TagComponent:
       Tag: HookModule
@@ -302,8 +333,8 @@ Entities:
     Children:
       []
     TransformComponent:
-      Position: [0, 7, 3]
-      Rotation: [-1.04719758, 8.52651283e-14, 0]
+      Position: [0, 7, 4]
+      Rotation: [-1.0489428, 8.52651283e-14, 0]
       Scale: [1, 1, 1]
     ScriptComponent:
       ClassHandle: 3636290106
@@ -390,7 +421,7 @@ Entities:
         - ID: 3454381800
           Name: RedBloodHood.DashControl:dashSpeed
           Type: 12
-          Data: 90
+          Data: 180
         - ID: 2640456224
           Name: RedBloodHood.DashControl:dashCooldown
           Type: 12
@@ -454,6 +485,16 @@ Entities:
       SoftShadows: true
       LightSize: 0.5
       ShadowAmount: 1
+  - Entity: 14675989484783329521
+    TagComponent:
+      Tag: Testing Modules
+    Parent: 1705502273930568571
+    Children:
+      - Handle: 5371678211054418339
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, -0, 0]
+      Scale: [1, 1, 1]
   - Entity: 15735915208839772381
     TagComponent:
       Tag: Sky Light

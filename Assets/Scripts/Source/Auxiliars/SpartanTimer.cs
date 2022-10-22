@@ -25,28 +25,28 @@ namespace Auxiliars {
 
 		public TimeMode ReferenceTimeMode { get; private set; }
 
-
-		private GameManager GameManagerRef => EntityFetcher.gameManager;
 		private float startingTime;
+		private DateTime realTimeStartingTime;
 
 
 		public SpartanTimer(TimeMode timeMode) {
 			this.ReferenceTimeMode = timeMode;
 			this.startingTime = 0f;
 			this.Started = false;
+			this.realTimeStartingTime = DateTime.MinValue;
 		}
 
 		public void Start() {
 			if (Started) return;
 			switch (ReferenceTimeMode) {
 				case TimeMode.Fixed:
-					this.startingTime = GameManagerRef.CurrentPhysicsTime;
+					this.startingTime = Time.CurrentPhysicsTime;
 					break;
 				case TimeMode.Framed:
-					this.startingTime = GameManagerRef.CurrentTime;
+					this.startingTime = Time.CurrentTime;
 					break;
 				case TimeMode.RealTime:
-					this.startingTime = Environment.TickCount;
+					this.realTimeStartingTime = DateTime.Now;
 					break;
 				default:
 					throw new Exception("No proper time mode was found!");
@@ -59,15 +59,14 @@ namespace Auxiliars {
 			float finalTime = 0f;
 			switch (ReferenceTimeMode) {
 				case TimeMode.Fixed:
-					finalTime = (GameManagerRef.CurrentPhysicsTime - this.startingTime) * SCALING_VALUES[(int)scaleMode];
+					finalTime = (Time.CurrentPhysicsTime - this.startingTime) * SCALING_VALUES[(int)scaleMode];
 					break;
 				case TimeMode.Framed:
-					finalTime = (GameManagerRef.CurrentTime - this.startingTime) * SCALING_VALUES[(int)scaleMode];
+					finalTime = (Time.CurrentTime - this.startingTime) * SCALING_VALUES[(int)scaleMode];
 					break;
 				case TimeMode.RealTime:
-					finalTime = (Environment.TickCount - this.startingTime);
-					if (scaleMode == TimeScaleMode.Milliseconds) break;
-					finalTime = (finalTime / 1000f) * SCALING_VALUES[(int)scaleMode];
+					TimeSpan diff = DateTime.Now - this.realTimeStartingTime;
+					finalTime = (float)(diff.TotalSeconds * SCALING_VALUES[(int)scaleMode]);
 					break;
 			}
 			return finalTime;

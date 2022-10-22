@@ -368,6 +368,17 @@ ScriptCache:
           TypeEncoding: 12
           NativeType: 9
           Flags: 4
+    - ClassID: 1632802572
+      Name: RedBloodHood.SpartanTimerTest
+      ParentID: 2226106790
+      Abstract: false
+      FieldData:
+        - ID: 976394032
+          Name: RedBloodHood.SpartanTimerTest:realTimeSeconds
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 8
     - ClassID: 2825862062
       Name: RedBloodHood.Source.Auxiliars.InputManager
       ParentID: 0

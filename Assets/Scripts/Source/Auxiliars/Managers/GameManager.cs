@@ -4,9 +4,6 @@ using System.Collections.Generic;
 namespace RedBloodHood.Auxiliars {
 	public class GameManager : Entity {
 
-		public float CurrentTime { get; private set; }
-		public float CurrentPhysicsTime { get; private set; }
-
 		private bool isFirstFrame = true;
 		private Dictionary<ulong, Entity> enemiesMap;
 
@@ -26,18 +23,13 @@ namespace RedBloodHood.Auxiliars {
 		protected override void OnCreate() {
 			EntityFetcher.player = FindEntityByTag("Player");
 			EntityFetcher.gameManager = this;
-			Time.GetPhysicsTime = () => CurrentPhysicsTime;
-			Time.GetTime = () => CurrentTime;
 			isFirstFrame = true;
-			this.CurrentPhysicsTime = 0f;
-			this.CurrentTime = 0f;
 			this.IsControllerPlugged = false;
 			this.enemiesMap = new Dictionary<ulong, Entity>();
 		}
 
 		protected override void OnUpdate(float ts) {
 			base.OnUpdate(ts);
-			CurrentTime += ts;
 			HandleControllerInput();
 			if (isFirstFrame) {
 				FillMaps();
@@ -51,11 +43,6 @@ namespace RedBloodHood.Auxiliars {
 			for (int i = 0; i < allEntities.Length; i++) {
 				EnemyMapCheckAndInsert(allEntities[i]);
 			}
-		}
-
-		protected override void OnPhysicsUpdate(float ts) {
-			base.OnPhysicsUpdate(ts);
-			CurrentPhysicsTime += ts;
 		}
 
 		private void HandleControllerInput() {

@@ -1,0 +1,10 @@
+TODO:
+- Check some timer bugs --- DONE
+- Solve the axe's rotation
+- Solve axe control bug --- DONE
+- Improve overall "feel" of the attack
+- Implement the Time class inside the engine instead of outside of it --- DONE
+
+
+IDEAS:
+- To replace the fixed update external setting, and move it to a more internal frame of reference, make the Time.cpp class handle its very own Physx OnFixedUpdate event (working as a sort of game manager)

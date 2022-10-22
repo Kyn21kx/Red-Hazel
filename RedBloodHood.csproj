@@ -361,6 +361,7 @@
     <Compile Include="Assets\Scripts\Source\Player\DashControl.cs" />
     <Compile Include="Assets\Scripts\Source\Player\HookControl.cs" />
     <Compile Include="Assets\Scripts\Source\Player\Movement.cs" />
+    <Compile Include="Assets\Scripts\Source\Testing\SpartanTimerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="X:\HazelEngine\Unstable-Version\Hazel-dev\Hazel-ScriptCore\Hazel-ScriptCore.csproj">

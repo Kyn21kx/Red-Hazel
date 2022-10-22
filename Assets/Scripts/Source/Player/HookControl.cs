@@ -34,18 +34,26 @@ namespace RedBloodHood {
 		protected override void OnUpdate(float ts) {
 			base.OnUpdate(ts);
 			this.HandleInput();
+			if (!this.IsHookAvailable)
+				this.CheckForReturn();
+		}
+
+
+		private void CheckForReturn() {
+			if (this.axeReference.Parent != null)
+				this.ResetHookAvailability();
 		}
 
 		private void HandleInput() {
 			//If we press LT (or left click we aim the hook)
 			float controllerValue = InputManager.GetAxisRaw(GamepadAxis.LeftTrigger);
-			if (controllerValue > 0f)
+			if (controllerValue > 0f && this.IsHookAvailable)
 				this.Aim();
 			else
 				this.LiftAim();
 
 			float rightTriggerValue = InputManager.GetAxisRaw(GamepadAxis.RightTrigger);
-			if (this.IsAiming && rightTriggerValue > 0f)
+			if (this.IsAiming && rightTriggerValue > 0f && this.IsHookAvailable)
 				Shoot();
 
 		}
@@ -101,6 +109,11 @@ namespace RedBloodHood {
 			//Unparent the axe
 			//Pass parameters to the axe's script
 			axeScriptComponent.DetachAndHook(direction, this.throwingSpeed, this.maximumRange);
+		}
+
+		private void ResetHookAvailability() {
+			this.IsHookAvailable = true;
+			this.LiftAim();
 		}
 
 	}
