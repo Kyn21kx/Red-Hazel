@@ -92,6 +92,9 @@ Assets:
   - Handle: 10859372873259754079
     FilePath: Materials/AimMaterial.hmaterial
     Type: Material
+  - Handle: 11248715498621581502
+    FilePath: Scripts/Source/Testing/SpartanTimerTest.cs
+    Type: ScriptFile
   - Handle: 11391363654727571520
     FilePath: Meshes/Default/Capsule.fbx
     Type: MeshSource
