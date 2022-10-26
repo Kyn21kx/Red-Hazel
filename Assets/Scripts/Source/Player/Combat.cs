@@ -34,6 +34,8 @@ namespace RedBloodHood {
 
 		private Movement movementRef;
 
+		private HookControl hookRef;
+
 		private SpartanTimer attackCooldownTimer;
 
 		private SpartanTimer attackDurationTimer;
@@ -51,6 +53,8 @@ namespace RedBloodHood {
 			attackCooldownTimer = new SpartanTimer(TimeMode.Framed);
 			this.attackDurationTimer = new SpartanTimer(TimeMode.Fixed);
 			this.movementRef = (Movement)PlayerRef.GetComponent<ScriptComponent>().Instance;
+			Entity hookModule = FindEntityByTag("HookModule");
+			this.hookRef = hookModule.GetComponent<ScriptComponent>().Instance as HookControl;
 		}
 
 		protected override void OnNonActorPhysicsUpdate(float ts) {
@@ -73,9 +77,14 @@ namespace RedBloodHood {
 		}
 
 		private void HandleInput() {
-			if (PressedAttackInput() && !this.attackCooldownTimer.Started) {
+			if (PressedAttackInput() && CanAttack()) {
 				this.TriggerAttack();
 			}
+		}
+
+		private bool CanAttack() {
+			//The cooldown for the attack has not been started, and the axe is not flying as a hook
+			return !this.attackCooldownTimer.Started && this.hookRef.IsHookAvailable;
 		}
 
 		private void DebugAttackDir() {

@@ -151,6 +151,17 @@ ScriptCache:
           TypeEncoding: 12
           NativeType: 9
           Flags: 8
+    - ClassID: 1753746942
+      Name: RedBloodHood.AxeStates
+      ParentID: 336772613
+      Abstract: false
+      FieldData:
+        - ID: 2574198317
+          Name: RedBloodHood.AxeStates:value__
+          DisplayName: ""
+          TypeEncoding: 8
+          NativeType: 3
+          Flags: 4
     - ClassID: 1565428759
       Name: RedBloodHood.AxeControl
       ParentID: 2226106790
@@ -179,6 +190,12 @@ ScriptCache:
           DisplayName: ""
           TypeEncoding: 17
           NativeType: 13
+          Flags: 8
+        - ID: 274364352
+          Name: RedBloodHood.AxeControl:travelTime
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
           Flags: 8
     - ClassID: 3480346284
       Name: RedBloodHood.Combat

@@ -30,6 +30,10 @@ Entities:
           Name: RedBloodHood.AxeControl:initialPosition
           Type: 17
           Data: [0, 0, 0]
+        - ID: 274364352
+          Name: RedBloodHood.AxeControl:travelTime
+          Type: 12
+          Data: 0
   - Entity: 1705502273930568571
     TagComponent:
       Tag: TestingManager
@@ -103,7 +107,7 @@ Entities:
         - ID: 1107116951
           Name: RedBloodHood.Combat:attackAngle
           Type: 12
-          Data: 30
+          Data: 50
         - ID: 356808277
           Name: RedBloodHood.Combat:shortLeapTime
           Type: 12
@@ -181,7 +185,7 @@ Entities:
         - ID: 3609468036
           Name: RedBloodHood.Movement:speed
           Type: 12
-          Data: 50
+          Data: 65
         - ID: 2710493863
           Name: RedBloodHood.Movement:HORIZONTAL
           Type: 8
@@ -290,7 +294,7 @@ Entities:
         - ID: 2412857995
           Name: RedBloodHood.HookControl:maximumRange
           Type: 12
-          Data: 10
+          Data: 5
         - ID: 1300844739
           Name: RedBloodHood.HookControl:throwingSpeed
           Type: 12

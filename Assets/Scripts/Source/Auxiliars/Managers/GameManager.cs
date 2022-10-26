@@ -38,6 +38,7 @@ namespace RedBloodHood.Auxiliars {
 
 		}
 
+
 		private void FillMaps() {
 			Entity[] allEntities = Scene.GetEntities();
 			for (int i = 0; i < allEntities.Length; i++) {
@@ -54,6 +55,8 @@ namespace RedBloodHood.Auxiliars {
 			this.pluggedControllerID = controllers[0];
 			this.IsControllerPlugged = true;
 		}
+
+		//TODO: Move to entity fetcher class
 
 		private void EnemyMapCheckAndInsert(Entity entity) {
 			ScriptComponent scriptComponent = entity?.GetComponent<ScriptComponent>();

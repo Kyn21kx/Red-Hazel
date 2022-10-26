@@ -1,4 +1,5 @@
 ﻿using Hazel;
+using System.Collections.Generic;
 
 namespace RedBloodHood.Auxiliars {
 	public static class EntityFetcher {

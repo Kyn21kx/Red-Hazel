@@ -77,7 +77,6 @@ namespace RedBloodHood {
 				this.AimingDirection = rawDirection;
 			}
 
-			Log.Debug($"RS: {this.AimingDirection}");
 			Vector3 inWorldAimingDirection = new Vector3(this.AimingDirection.X, 0f, this.AimingDirection.Y);
 			Quaternion lookAtRotation = Quaternion.QuaternionLookRotation(inWorldAimingDirection, Vector3.Up);
 			

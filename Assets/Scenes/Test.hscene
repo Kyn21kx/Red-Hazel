@@ -30,6 +30,10 @@ Entities:
           Name: RedBloodHood.AxeControl:initialPosition
           Type: 17
           Data: [0, 0, 0]
+        - ID: 274364352
+          Name: RedBloodHood.AxeControl:travelTime
+          Type: 12
+          Data: 0
   - Entity: 1705502273930568571
     TagComponent:
       Tag: TestingManager
@@ -290,11 +294,11 @@ Entities:
         - ID: 2412857995
           Name: RedBloodHood.HookControl:maximumRange
           Type: 12
-          Data: 10
+          Data: 5
         - ID: 1300844739
           Name: RedBloodHood.HookControl:throwingSpeed
           Type: 12
-          Data: 10
+          Data: 15
         - ID: 1339570591
           Name: RedBloodHood.HookControl:aimGuide
           Type: 18
@@ -429,7 +433,7 @@ Entities:
         - ID: 3468672735
           Name: RedBloodHood.DashControl:dashDuration
           Type: 12
-          Data: 0.0439999998
+          Data: 0.0500000007
         - ID: 2386597738
           Name: RedBloodHood.DashControl:dashedAirbone
           Type: 2

@@ -2,9 +2,20 @@ TODO:
 - Check some timer bugs --- DONE
 - Solve the axe's rotation
 - Solve axe control bug --- DONE
-- Improve overall "feel" of the attack
+- Improve overall "feel" of the attack --- DONE
 - Implement the Time class inside the engine instead of outside of it --- DONE
+
+
+- Add deadzone to axe aiming
+- Make a main branch for the engine with production ready stuff
+- Make axe callback based on timer, and not distance 
+- Correct namespaces for auxiliars (set all to RedBloodHood.Auxiliars)
+- Add a GetEntityWithComponent method to Hazel
 
 
 IDEAS:
 - To replace the fixed update external setting, and move it to a more internal frame of reference, make the Time.cpp class handle its very own Physx OnFixedUpdate event (working as a sort of game manager)
+
+POSSIBLE BUGS:
+[AxeControl.cs - RecallToPlayer()] If we run into issues, maybe set a time constraint so the axe comes back in a fixed amount of time (use a Lerp)
+
