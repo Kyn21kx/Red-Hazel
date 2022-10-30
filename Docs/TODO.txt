@@ -7,6 +7,8 @@ TODO:
 
 
 - Add deadzone to axe aiming
+- Remove aim button
+- Get rid of running
 - Make a main branch for the engine with production ready stuff
 - Make axe callback based on timer, and not distance 
 - Correct namespaces for auxiliars (set all to RedBloodHood.Auxiliars)

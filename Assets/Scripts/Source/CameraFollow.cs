@@ -83,7 +83,7 @@ namespace RedBloodHood {
 				if (fullyRecenter)
 					this.following = false;
 				followingBlend = 0f;
-				Log.Debug("Dead");
+				System.Console.WriteLine("Dead");
 				return;
 			}
 			float interpolationTime = GetInterpTimeValue(timeStep);
@@ -107,7 +107,7 @@ namespace RedBloodHood {
 			lerpedT.Y = originalY;
 			this.Rig.Translation = lerpedT;
 			this.following = true;
-			//Log.Debug(this.Rig.Translation);
+			//Console.WriteLine(this.Rig.Translation);
 		}
 
 		private float GetInterpTimeValue(float ts) {
@@ -127,7 +127,7 @@ namespace RedBloodHood {
 				return dis <= initialDistance;
 			}
 			Vector3 deadZoneMapped = deadZone / 2f;
-			Log.Debug($"Center: {center}, Camera's pos: {Transform.Translation}, Distance: {SpartanMath.Pow(dis, 0.5f)}, DeadZone: {deadZoneMapped}");
+			System.Console.WriteLine($"Center: {center}, Camera's pos: {Transform.Translation}, Distance: {SpartanMath.Pow(dis, 0.5f)}, DeadZone: {deadZoneMapped}");
 			return dis <= (deadZoneMapped.X * deadZoneMapped.X) && dis <= (deadZoneMapped.Z * deadZoneMapped.Z);
 		}
 

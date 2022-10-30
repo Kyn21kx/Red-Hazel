@@ -104,13 +104,13 @@ namespace RedBloodHood {
 			//Start doing some physics checks to overlap a sphere onto the player
 			Collider[] colliders = new Collider[10];
 			int count = Physics.OverlapSphereNonAlloc(PlayerRef.Translation, attackRadius, colliders); //Add an offset to this.Translation if we see that bug
-			Log.Debug($"Collider count: {count}");
+			Console.WriteLine($"Collider count: {count}");
 			//System.Text.StringBuilder sb = new System.Text.StringBuilder("Names: ");
 			for (int i = 0; i < count; i++) {
 				//sb.Append($"{colliders[i].Entity.Tag}, ");
 				//Skip if the collider is not an enemy
 				if (!IsEnemy(colliders[i])) continue;
-				Log.Debug("Enemy detected!");
+				Console.WriteLine("Enemy detected!");
 				
 				TransformComponent target = colliders[i].Entity.Transform;
 				//Get the direction, destination - src
@@ -123,7 +123,7 @@ namespace RedBloodHood {
 				Vector3 realAttackDir = new Vector3(rawAttackDir.X, 0f, rawAttackDir.Y);
 				float angle = Vector3.Angle(realAttackDir, dir);
 
-				Log.Debug($"Enemy at an angle of: {angle} from the forward facing vector");
+				Console.WriteLine($"Enemy at an angle of: {angle} from the forward facing vector");
 				//Check if the target is in the field of view by comparing the angle with a max angle value
 				if (angle > attackAngle) continue; //Enemy out of range of the cone
 
@@ -179,7 +179,7 @@ namespace RedBloodHood {
 
 		public bool IsInRange(TransformComponent target) {
 			float sqrDis = SpartanMath.DistanceSqr(PlayerRef.Translation, target.Translation);
-			Log.Debug($"Distance from player: {Mathf.Sqrt(sqrDis)}");
+			Console.WriteLine($"Distance from player: {Mathf.Sqrt(sqrDis)}");
 			return sqrDis < (this.attackRadius * this.attackRadius);
 		}
 

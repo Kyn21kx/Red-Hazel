@@ -385,6 +385,12 @@ ScriptCache:
           TypeEncoding: 12
           NativeType: 9
           Flags: 4
+        - ID: 4150042676
+          Name: RedBloodHood.Movement:debug
+          DisplayName: ""
+          TypeEncoding: 2
+          NativeType: 0
+          Flags: 4
     - ClassID: 1632802572
       Name: RedBloodHood.SpartanTimerTest
       ParentID: 2226106790

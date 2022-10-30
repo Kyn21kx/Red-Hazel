@@ -29,7 +29,7 @@ namespace RedBloodHood {
 
 		protected override void OnCreate() {
 			var thing = this.Parent.GetComponent<ScriptComponent>();
-			Log.Debug(thing);
+			System.Console.WriteLine(thing);
 			movRef = (Movement)this.Parent.GetComponent<ScriptComponent>().Instance;
 			movRef.dashRef = this;
 			//Instantiate 2 timers, one for the cooldown, and one for the dashing time
@@ -67,7 +67,7 @@ namespace RedBloodHood {
 			if (dashTriggerState == ExternalDashResults.EXTERNAL_FAILURE) return false;
 
 			float currTime = durationTimer.GetCurrentTime(TimeScaleMode.Seconds);
-			Log.Debug($"Current dashing time: {currTime}");
+			System.Console.WriteLine($"Current dashing time: {currTime}");
 			if (currTime >= dashDuration) {
 				durationTimer.Stop();
 				//this.dashedAirbone = !movRef.Grounded;
@@ -85,7 +85,7 @@ namespace RedBloodHood {
 		public bool AbleToDash(SpartanTimer cooldownTimer, SpartanTimer durationTimer, float cooldown) {
 			if (!cooldownTimer.Started) return true;
 			float timePassed = cooldownTimer.GetCurrentTime(TimeScaleMode.Seconds);
-			Log.Debug($"Cooldown: {timePassed}");
+			System.Console.WriteLine($"Cooldown: {timePassed}");
 			return (timePassed >= cooldown && !durationTimer.Started);
 		}
 

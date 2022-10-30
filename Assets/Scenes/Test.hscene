@@ -210,6 +210,10 @@ Entities:
           Name: RedBloodHood.Movement:deadzone
           Type: 12
           Data: 0.100000001
+        - ID: 4150042676
+          Name: RedBloodHood.Movement:debug
+          Type: 2
+          Data: false
     StaticMeshComponent:
       AssetID: 8947119958053742311
       MaterialTable:

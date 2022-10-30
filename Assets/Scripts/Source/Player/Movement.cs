@@ -16,7 +16,6 @@ namespace RedBloodHood {
 		private Vector2 movementVector;
 		public Vector2 PreviousDirection { get; private set; }
 		public float speed = 10f;
-		public float runningSpeed = 20f;
 		public float inputSmoothingLevel = 1E3f;
 		public float deadzone = 0.1f;
 		private const float FIXED_SPEED_FACTOR = 10f;
@@ -25,6 +24,7 @@ namespace RedBloodHood {
 		public DashControl dashRef;
 		//TODO: Maybe make this an enum as StirState { FREE, LOCKED, etc }
 		public bool CanStir { get; set; }
+		public bool debug = false;
 
 		protected override void OnCreate() {
 			movementVector = Vector2.Zero;
@@ -36,6 +36,10 @@ namespace RedBloodHood {
 		protected override void OnUpdate(float ts) {
 			base.OnUpdate(ts);
 			HandleInput();
+			if (debug) {
+				this.DebugMovementDir();
+				this.DebugValues();
+			}
 		}
 
 		protected override void OnPhysicsUpdate(float ts) {
@@ -43,6 +47,19 @@ namespace RedBloodHood {
 			if (CanStir)
 				Move();
 			this.dashRef.ParentPhysicsUpdate();
+		}
+
+		private void DebugMovementDir() {
+			Vector3 destination = new Vector3(this.movementVector.X, 0f, this.movementVector.Y).Normalized() + this.Translation;
+			destination.Y = this.Translation.Y;
+			DebugRenderer.LineWidth = 5f;
+			DebugRenderer.DrawLine(this.Translation, destination, Color.Black);
+		}
+
+		private void DebugValues() {
+			Console.WriteLine($"Movement input: {this.movementVector}");
+			Console.WriteLine($"Previous direction: {this.PreviousDirection}");
+			Console.WriteLine($"Current movement speed: {this.Rigidbody.LinearVelocity}");
 		}
 
 		private void HandleInput() {
@@ -68,10 +85,9 @@ namespace RedBloodHood {
 		}
 
 		private void Move() {
-			float movementSpeed = this.IsRunning ? runningSpeed : speed;
 			this.movementVector.Normalize();
 			this.PreviousDirection = this.movementVector == Vector2.Zero ? this.PreviousDirection : this.movementVector;
-			this.movementVector *= movementSpeed * Time.FixedDeltaTime * FIXED_SPEED_FACTOR;
+			this.movementVector *= this.speed * Time.FixedDeltaTime * FIXED_SPEED_FACTOR;
 			Vector3 finalVector =  new Vector3(this.movementVector.X, this.Rigidbody.LinearVelocity.Y, this.movementVector.Y);
 			this.Rigidbody.LinearVelocity = finalVector;
 		}
