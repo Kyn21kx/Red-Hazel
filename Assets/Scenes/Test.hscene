@@ -201,7 +201,7 @@ Entities:
         - ID: 1007214441
           Name: RedBloodHood.Movement:runningSpeed
           Type: 12
-          Data: 75
+          Data: 65
         - ID: 1250632465
           Name: RedBloodHood.Movement:inputSmoothingLevel
           Type: 12
@@ -306,7 +306,7 @@ Entities:
         - ID: 2490120729
           Name: RedBloodHood.HookControl:aimGuidePrefab
           Type: 18
-          Data: 5504911938019520580
+          Data: 3614322397165936923
         - ID: 1936795574
           Name: RedBloodHood.HookControl:aimGuideInstance
           Type: 18

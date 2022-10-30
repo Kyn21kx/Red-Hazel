@@ -20,6 +20,9 @@ Assets:
   - Handle: 3494687333460118562
     FilePath: Meshes/Default/Torus.fbx
     Type: MeshSource
+  - Handle: 3614322397165936923
+    FilePath: Prefabs/AimGuidePointy.hprefab
+    Type: Prefab
   - Handle: 4427788594499293209
     FilePath: Scripts/Source/Auxiliars/SpartanTimer.cs
     Type: ScriptFile
@@ -29,15 +32,9 @@ Assets:
   - Handle: 4743924267774570657
     FilePath: Models/Placeholders/CorrectedAxe.fbx
     Type: MeshSource
-  - Handle: 5504911938019520580
-    FilePath: Prefabs/AimGuidePivoted.hprefab
-    Type: Prefab
   - Handle: 6528103813709256420
     FilePath: Scripts/Source/Auxiliars/Managers/GameManager.cs
     Type: ScriptFile
-  - Handle: 6587927272635740660
-    FilePath: Prefabs/Aim guide.hprefab
-    Type: Prefab
   - Handle: 6600968962491890910
     FilePath: Materials/coob.hmaterial
     Type: Material
