@@ -197,6 +197,12 @@ ScriptCache:
           TypeEncoding: 12
           NativeType: 9
           Flags: 8
+        - ID: 1937935934
+          Name: RedBloodHood.AxeControl:rotationSpeed
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
     - ClassID: 3480346284
       Name: RedBloodHood.Combat
       ParentID: 2226106790
@@ -332,6 +338,12 @@ ScriptCache:
           TypeEncoding: 18
           NativeType: 17
           Flags: 4
+        - ID: 131752890
+          Name: RedBloodHood.HookControl:deadzone
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
     - ClassID: 1196690083
       Name: RedBloodHood.Movement
       ParentID: 2226106790
@@ -390,6 +402,23 @@ ScriptCache:
           DisplayName: ""
           TypeEncoding: 2
           NativeType: 0
+          Flags: 4
+    - ClassID: 2208165374
+      Name: RedBloodHood.TorqueTest
+      ParentID: 2226106790
+      Abstract: false
+      FieldData:
+        - ID: 644923467
+          Name: RedBloodHood.TorqueTest:rotationSpeed
+          DisplayName: ""
+          TypeEncoding: 12
+          NativeType: 9
+          Flags: 4
+        - ID: 2243211431
+          Name: RedBloodHood.TorqueTest:rotationVector
+          DisplayName: ""
+          TypeEncoding: 17
+          NativeType: 13
           Flags: 4
     - ClassID: 1632802572
       Name: RedBloodHood.SpartanTimerTest

@@ -80,8 +80,7 @@ namespace RedBloodHood {
 			IsRunning = Input.IsKeyHeld(KeyCode.LeftShift);
 
 			this.movementVector.Clamp(Vector2.MinusFull, Vector2.Full);
-			if (this.movementVector.Length() < deadzone)
-				this.movementVector = Vector2.Zero;
+			SpartanMath.ApplyDeadzone(ref this.movementVector, deadzone);
 		}
 
 		private void Move() {

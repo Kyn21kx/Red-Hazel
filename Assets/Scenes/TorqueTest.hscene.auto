@@ -1,0 +1,151 @@
+Scene: TorqueTest
+Entities:
+  - Entity: 1153980973086493875
+    TagComponent:
+      Tag: Directional Light
+    Parent: 0
+    Children:
+      []
+    TransformComponent:
+      Position: [3.55991197, 0.981069982, 0.462905854]
+      Rotation: [1.39626336, 0.17453292, 0]
+      Scale: [1, 1, 1]
+    DirectionalLightComponent:
+      Intensity: 1
+      Radiance: [0.983870983, 0.983870983, 0.983870983]
+      CastShadows: true
+      SoftShadows: true
+      LightSize: 0.5
+      ShadowAmount: 1
+  - Entity: 2791647517798049304
+    TagComponent:
+      Tag: Axehead
+    Parent: 12605591510014107616
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 12988328795387680530
+      Entity: 11708090486832413996
+    TransformComponent:
+      Position: [0.0463938862, 0, 0.0281431787]
+      Rotation: [0, -0, 0]
+      Scale: [1, 1, 1]
+    MeshComponent:
+      AssetID: 11620157491620742781
+      SubmeshIndex: 1
+      MaterialTable:
+        0: 9322701016441271232
+  - Entity: 4141392236843163185
+    TagComponent:
+      Tag: Sky Light
+    Parent: 0
+    Children:
+      []
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    SkyLightComponent:
+      EnvironmentMap: 0
+      Intensity: 0.629999995
+      Lod: 0
+      DynamicSky: true
+      TurbidityAzimuthInclination: [2.22000003, 1.73000002, -0.0500000007]
+  - Entity: 9194968009590035229
+    TagComponent:
+      Tag: Cube
+    Parent: 0
+    Children:
+      []
+    TransformComponent:
+      Position: [0, -1.38, 0]
+      Rotation: [0, 0, 0]
+      Scale: [436.306488, 59.7399025, 583.859131]
+    StaticMeshComponent:
+      AssetID: 15434794342408240744
+      MaterialTable:
+        0: 0
+    BoxColliderComponent:
+      Offset: [0, 0, 0]
+      HalfSize: [0.5, 0.5, 0.5]
+      IsTrigger: false
+      Material: 0
+  - Entity: 9225484321572460306
+    TagComponent:
+      Tag: Camera
+    Parent: 0
+    Children:
+      []
+    TransformComponent:
+      Position: [0, 0, 6.4000001]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    CameraComponent:
+      Camera:
+        ProjectionType: 0
+        PerspectiveFOV: 45
+        PerspectiveNear: 0.100000001
+        PerspectiveFar: 1000
+        OrthographicSize: 10
+        OrthographicNear: -1
+        OrthographicFar: 1
+      Primary: true
+  - Entity: 10086759861604333669
+    TagComponent:
+      Tag: Handle001
+    Parent: 12605591510014107616
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 12988328795387680530
+      Entity: 6453169578883803919
+    TransformComponent:
+      Position: [0.0463938862, 0, 0.0281431787]
+      Rotation: [0, -0, 0]
+      Scale: [1, 1, 1]
+    MeshComponent:
+      AssetID: 11620157491620742781
+      SubmeshIndex: 0
+      MaterialTable:
+        0: 9792102105927426289
+  - Entity: 12605591510014107616
+    TagComponent:
+      Tag: CorrectedAxe
+    Parent: 0
+    Children:
+      - Handle: 10086759861604333669
+      - Handle: 2791647517798049304
+    PrefabComponent:
+      Prefab: 12988328795387680530
+      Entity: 9599854363698403226
+    TransformComponent:
+      Position: [0.300000012, 0, 0]
+      Rotation: [0, 1.57079637, 0]
+      Scale: [0.249999866, 0.25, 0.249999866]
+    ScriptComponent:
+      ClassHandle: 2208165374
+      StoredFields:
+        - ID: 644923467
+          Name: RedBloodHood.TorqueTest:rotationSpeed
+          Type: 12
+          Data: 50
+        - ID: 2243211431
+          Name: RedBloodHood.TorqueTest:rotationVector
+          Type: 17
+          Data: [0, 0, 0]
+    RigidBodyComponent:
+      BodyType: 1
+      LayerID: 0
+      Mass: 1
+      LinearDrag: 0.00999999978
+      AngularDrag: 0.0500000007
+      DisableGravity: true
+      IsKinematic: false
+      CollisionDetection: 0
+      LockFlags: "\b"
+SceneAudio:
+  MasterReverb:
+    Pre-delay: 44
+    Room size: 0.49999994
+    Damping: 0.5
+    Width: 1

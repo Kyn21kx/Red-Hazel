@@ -1,0 +1,98 @@
+Prefab:
+  - Entity: 11708090486832413996
+    TagComponent:
+      Tag: Axehead
+    Parent: 9599854363698403226
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 12988328795387680530
+      Entity: 11708090486832413996
+    TransformComponent:
+      Position: [0.0463938862, 0, 0.0281431787]
+      Rotation: [0, -0, 0]
+      Scale: [1, 1, 1]
+    MeshComponent:
+      AssetID: 11620157491620742781
+      SubmeshIndex: 1
+      MaterialTable:
+        0: 9322701016441271232
+    RigidBodyComponent:
+      BodyType: 1
+      LayerID: 0
+      Mass: 1
+      LinearDrag: 0.00999999978
+      AngularDrag: 0.0500000007
+      DisableGravity: true
+      IsKinematic: false
+      CollisionDetection: 0
+      LockFlags: "\x00"
+  - Entity: 6453169578883803919
+    TagComponent:
+      Tag: Handle001
+    Parent: 9599854363698403226
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 12988328795387680530
+      Entity: 6453169578883803919
+    TransformComponent:
+      Position: [0.0463938862, 0, 0.0281431787]
+      Rotation: [0, -0, 0]
+      Scale: [1, 1, 1]
+    MeshComponent:
+      AssetID: 11620157491620742781
+      SubmeshIndex: 0
+      MaterialTable:
+        0: 9792102105927426289
+  - Entity: 9599854363698403226
+    TagComponent:
+      Tag: CorrectedAxe
+    Parent: 0
+    Children:
+      - Handle: 6453169578883803919
+      - Handle: 11708090486832413996
+    PrefabComponent:
+      Prefab: 12988328795387680530
+      Entity: 9599854363698403226
+    TransformComponent:
+      Position: [0.300000012, 0, 0]
+      Rotation: [0, 1.51698136, 0]
+      Scale: [0.249999866, 0.25, 0.249999866]
+    ScriptComponent:
+      ClassHandle: 1565428759
+      StoredFields:
+        - ID: 1452269052
+          Name: RedBloodHood.AxeControl:travelSpeed
+          Type: 12
+          Data: 0
+        - ID: 2737521458
+          Name: RedBloodHood.AxeControl:travelDistance
+          Type: 12
+          Data: 0
+        - ID: 2689114314
+          Name: RedBloodHood.AxeControl:travelDirection
+          Type: 17
+          Data: [0, 0, 0]
+        - ID: 114109024
+          Name: RedBloodHood.AxeControl:initialPosition
+          Type: 17
+          Data: [0, 0, 0]
+        - ID: 274364352
+          Name: RedBloodHood.AxeControl:travelTime
+          Type: 12
+          Data: 0
+        - ID: 1937935934
+          Name: RedBloodHood.AxeControl:rotationSpeed
+          Type: 12
+          Data: 3
+    RigidBodyComponent:
+      BodyType: 1
+      LayerID: 0
+      Mass: 1
+      LinearDrag: 0.00999999978
+      AngularDrag: 0.0500000007
+      DisableGravity: true
+      IsKinematic: false
+      CollisionDetection: 0
+      LockFlags: " "

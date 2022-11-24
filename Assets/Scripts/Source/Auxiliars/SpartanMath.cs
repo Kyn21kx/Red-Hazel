@@ -116,5 +116,16 @@ namespace RedBloodHood.Auxiliars {
 			Vector3 towards = a - b;
 			return towards.sqrMagnitude;
 		}
+
+		public static void ApplyDeadzone(ref Vector2 toApply, float deadzone = 0.2f) {
+			if (toApply.Length() < deadzone)
+				toApply = Vector2.Zero;
+		}
+
+		public static void ApplyDeadzone(ref Vector3 toApply, float deadzone = 0.2f) {
+			if (toApply.Length() < deadzone)
+				toApply = Vector3.Zero;
+		}
+
 	}
 }

@@ -12,6 +12,7 @@ namespace RedBloodHood {
 		//We'll start with some defining stats for the hook
 		public float maximumRange = 1f;
 		public float throwingSpeed = 10f;
+		public float deadzone = 0.2f;
 
 		public Prefab aimGuidePrefab;
 		private Entity aimGuideInstance;
@@ -20,6 +21,7 @@ namespace RedBloodHood {
 
 		public Vector2 AimingDirection { get; private set; }
 		private Entity PlayerRef => EntityFetcher.player;
+		private Movement movRef;
 
 		#endregion
 
@@ -29,6 +31,7 @@ namespace RedBloodHood {
 			this.IsHookAvailable = true;
 			this.aimGuideInstance = null;
 			this.AimingDirection = Vector2.Right;
+			this.movRef = PlayerRef.GetComponent<ScriptComponent>().Instance as Movement;
 		}
 
 		protected override void OnUpdate(float ts) {
@@ -46,19 +49,23 @@ namespace RedBloodHood {
 
 		private void HandleInput() {
 			//If we press LT (or left click we aim the hook)
-			float controllerValue = InputManager.GetAxisRaw(GamepadAxis.LeftTrigger);
-			if (controllerValue > 0f && this.IsHookAvailable)
-				this.Aim();
+			Vector2 rawAimDirection = new Vector2 {
+				X = -InputManager.GetAxisRaw(GamepadAxis.RightStickVertical),
+				Y = -InputManager.GetAxisRaw(GamepadAxis.RightStickHorizontal)
+			};
+			SpartanMath.ApplyDeadzone(ref rawAimDirection, deadzone);
+			if (rawAimDirection != Vector2.Zero  && this.IsHookAvailable)
+				this.Aim(rawAimDirection);
 			else
 				this.LiftAim();
 
 			float rightTriggerValue = InputManager.GetAxisRaw(GamepadAxis.RightTrigger);
-			if (this.IsAiming && rightTriggerValue > 0f && this.IsHookAvailable)
+			if (rightTriggerValue > 0f && this.IsHookAvailable)
 				Shoot();
 
 		}
 
-		private void Aim() {
+		private void Aim(Vector2 rawDirection) {
 			//Now, to aim we would ideally spawn some graphic interface element,
 			//but for now, let's keep it at a rectangle attached to this entity as a mesh renderer
 			if (!this.IsAiming) {
@@ -66,17 +73,8 @@ namespace RedBloodHood {
 				this.aimGuideInstance = this.InstantiateChild(this.aimGuidePrefab);
 			}
 			this.IsAiming = true;
-			
-			//Look at the direction of the RS
-			Vector2 rawDirection = new Vector2 {
-				X = -InputManager.GetAxisRaw(GamepadAxis.RightStickVertical),
-				Y = -InputManager.GetAxisRaw(GamepadAxis.RightStickHorizontal)
-			};
-
-			if (rawDirection != Vector2.Zero) {
-				this.AimingDirection = rawDirection;
-			}
-
+			this.AimingDirection = rawDirection;
+			//Look at the direction of RS
 			Vector3 inWorldAimingDirection = new Vector3(this.AimingDirection.X, 0f, this.AimingDirection.Y);
 			Quaternion lookAtRotation = Quaternion.QuaternionLookRotation(inWorldAimingDirection, Vector3.Up);
 			
@@ -92,13 +90,18 @@ namespace RedBloodHood {
 		}
 
 		private void Shoot() {
-			if (!this.IsAiming) return;
-			//Set the axe's trajectory
-			Vector3 direction = new Vector3(this.AimingDirection.Y, 0f, this.AimingDirection.X);
-			direction.Normalize();
+			Vector3 direction;
+			if (this.IsAiming) {
+				//Correct some weird input shit
+				direction = new Vector3(this.AimingDirection.Y, 0f, this.AimingDirection.X);
+				direction.X = -direction.X;
+			}
+			else {
+				direction = new Vector3(this.movRef.PreviousDirection.X, 0f, this.movRef.PreviousDirection.Y);
+			}
 
-			//Correct some weird input shit
-			direction.X = -direction.X;
+			//Set the axe's trajectory
+			direction.Normalize();			
 
 			//Stop aiming
 			this.LiftAim();

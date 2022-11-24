@@ -1,0 +1,388 @@
+Prefab:
+  - Entity: 8881797002109664403
+    TagComponent:
+      Tag: Axehead
+    Parent: 13574039278631189627
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 14591180671159364733
+      Entity: 8881797002109664403
+    TransformComponent:
+      Position: [0.0463938862, 0, 0.0281431787]
+      Rotation: [0, -0, 0]
+      Scale: [1, 1, 1]
+    MeshComponent:
+      AssetID: 11620157491620742781
+      SubmeshIndex: 1
+      MaterialTable:
+        0: 9322701016441271232
+    RigidBodyComponent:
+      BodyType: 1
+      LayerID: 0
+      Mass: 1
+      LinearDrag: 0.00999999978
+      AngularDrag: 0.0500000007
+      DisableGravity: true
+      IsKinematic: false
+      CollisionDetection: 0
+      LockFlags: "\x00"
+  - Entity: 1470618194647882951
+    TagComponent:
+      Tag: Handle001
+    Parent: 13574039278631189627
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 14591180671159364733
+      Entity: 1470618194647882951
+    TransformComponent:
+      Position: [0.0463938862, 0, 0.0281431787]
+      Rotation: [0, -0, 0]
+      Scale: [1, 1, 1]
+    MeshComponent:
+      AssetID: 11620157491620742781
+      SubmeshIndex: 0
+      MaterialTable:
+        0: 9792102105927426289
+  - Entity: 13574039278631189627
+    TagComponent:
+      Tag: CorrectedAxe
+    Parent: 14388698646767823957
+    Children:
+      - Handle: 1470618194647882951
+      - Handle: 8881797002109664403
+    PrefabComponent:
+      Prefab: 14591180671159364733
+      Entity: 13574039278631189627
+    TransformComponent:
+      Position: [0.300000012, 0, 0]
+      Rotation: [0, 1.51698136, 0]
+      Scale: [0.249999866, 0.25, 0.249999866]
+    ScriptComponent:
+      ClassHandle: 1565428759
+      StoredFields:
+        - ID: 1452269052
+          Name: RedBloodHood.AxeControl:travelSpeed
+          Type: 12
+          Data: 0
+        - ID: 2737521458
+          Name: RedBloodHood.AxeControl:travelDistance
+          Type: 12
+          Data: 0
+        - ID: 2689114314
+          Name: RedBloodHood.AxeControl:travelDirection
+          Type: 17
+          Data: [0, 0, 0]
+        - ID: 114109024
+          Name: RedBloodHood.AxeControl:initialPosition
+          Type: 17
+          Data: [0, 0, 0]
+        - ID: 274364352
+          Name: RedBloodHood.AxeControl:travelTime
+          Type: 12
+          Data: 0
+        - ID: 1937935934
+          Name: RedBloodHood.AxeControl:rotationSpeed
+          Type: 12
+          Data: 3
+    RigidBodyComponent:
+      BodyType: 1
+      LayerID: 0
+      Mass: 1
+      LinearDrag: 0.00999999978
+      AngularDrag: 0.0500000007
+      DisableGravity: true
+      IsKinematic: false
+      CollisionDetection: 0
+      LockFlags: " "
+  - Entity: 17281053002561685107
+    TagComponent:
+      Tag: HookModule
+    Parent: 14388698646767823957
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 14591180671159364733
+      Entity: 17281053002561685107
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    ScriptComponent:
+      ClassHandle: 405709476
+      StoredFields:
+        - ID: 2412857995
+          Name: RedBloodHood.HookControl:maximumRange
+          Type: 12
+          Data: 5
+        - ID: 1300844739
+          Name: RedBloodHood.HookControl:throwingSpeed
+          Type: 12
+          Data: 15
+        - ID: 1339570591
+          Name: RedBloodHood.HookControl:aimGuide
+          Type: 18
+          Data: 14137003454334915662
+        - ID: 2490120729
+          Name: RedBloodHood.HookControl:aimGuidePrefab
+          Type: 18
+          Data: 3614322397165936923
+        - ID: 1936795574
+          Name: RedBloodHood.HookControl:aimGuideInstance
+          Type: 18
+          Data: 0
+        - ID: 3458968853
+          Name: RedBloodHood.HookControl:axeReference
+          Type: 18
+          Data: 1443634143561512705
+        - ID: 131752890
+          Name: RedBloodHood.HookControl:deadzone
+          Type: 12
+          Data: 0.200000003
+  - Entity: 16590734654640915706
+    TagComponent:
+      Tag: Camera
+    Parent: 14388698646767823957
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 14591180671159364733
+      Entity: 16590734654640915706
+    TransformComponent:
+      Position: [0, 7, 4]
+      Rotation: [-1.0489428, 8.52651283e-14, 0]
+      Scale: [1, 1, 1]
+    ScriptComponent:
+      ClassHandle: 3636290106
+      StoredFields:
+        - ID: 3364173372
+          Name: RedBloodHood.CameraFollow:followSpeed
+          Type: 12
+          Data: 0
+        - ID: 3038118874
+          Name: RedBloodHood.CameraFollow:followingBlend
+          Type: 12
+          Data: 0
+        - ID: 3115020565
+          Name: RedBloodHood.CameraFollow:offset
+          Type: 17
+          Data: [0, 0, 0]
+        - ID: 589031391
+          Name: RedBloodHood.CameraFollow:center
+          Type: 17
+          Data: [0, 0, 0]
+        - ID: 1649923924
+          Name: RedBloodHood.CameraFollow:deadZone
+          Type: 17
+          Data: [0, 0, 0]
+        - ID: 1051509167
+          Name: RedBloodHood.CameraFollow:target
+          Type: 18
+          Data: 0
+        - ID: 375028644
+          Name: RedBloodHood.CameraFollow:useFakeInterpolation
+          Type: 2
+          Data: false
+        - ID: 4104151613
+          Name: RedBloodHood.CameraFollow:height
+          Type: 12
+          Data: 0
+        - ID: 623391364
+          Name: RedBloodHood.CameraFollow:exponentFactor
+          Type: 12
+          Data: 2
+        - ID: 3243959054
+          Name: RedBloodHood.CameraFollow:child
+          Type: 18
+          Data: 0
+        - ID: 222247248
+          Name: RedBloodHood.CameraFollow:fullyRecenter
+          Type: 2
+          Data: false
+        - ID: 3731918517
+          Name: RedBloodHood.CameraFollow:following
+          Type: 2
+          Data: false
+        - ID: 723722673
+          Name: RedBloodHood.CameraFollow:initialDistance
+          Type: 12
+          Data: 0
+        - ID: 1544322439
+          Name: RedBloodHood.CameraFollow:enabled
+          Type: 2
+          Data: false
+    CameraComponent:
+      Camera:
+        ProjectionType: 0
+        PerspectiveFOV: 45
+        PerspectiveNear: 0.100000001
+        PerspectiveFar: 100000
+        OrthographicSize: 10
+        OrthographicNear: -1
+        OrthographicFar: 1
+      Primary: true
+  - Entity: 16658754191778708966
+    TagComponent:
+      Tag: CombatModule
+    Parent: 14388698646767823957
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 14591180671159364733
+      Entity: 16658754191778708966
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, -0, 0]
+      Scale: [0.0119189518, 0.0119189499, 0.0119189499]
+    ScriptComponent:
+      ClassHandle: 3480346284
+      StoredFields:
+        - ID: 1379521961
+          Name: RedBloodHood.Combat:attackDamage
+          Type: 8
+          Data: 1
+        - ID: 1948242652
+          Name: RedBloodHood.Combat:attackRadius
+          Type: 12
+          Data: 2
+        - ID: 634307835
+          Name: RedBloodHood.Combat:mouseDirectionOffset
+          Type: 17
+          Data: [0, 0]
+        - ID: 530008975
+          Name: RedBloodHood.Combat:attackDebugger
+          Type: 18
+          Data: 0
+        - ID: 1558612676
+          Name: RedBloodHood.Combat:playerRef
+          Type: 18
+          Data: 0
+        - ID: 2295142123
+          Name: RedBloodHood.Combat:debugger
+          Type: 18
+          Data: 0
+        - ID: 10156077
+          Name: RedBloodHood.Combat:attackCooldown
+          Type: 12
+          Data: 1
+        - ID: 1107116951
+          Name: RedBloodHood.Combat:attackAngle
+          Type: 12
+          Data: 50
+        - ID: 356808277
+          Name: RedBloodHood.Combat:shortLeapTime
+          Type: 12
+          Data: 0.0439999998
+        - ID: 4060808403
+          Name: RedBloodHood.Combat:shortLeapSpeed
+          Type: 12
+          Data: 90
+  - Entity: 2536565472477860155
+    TagComponent:
+      Tag: DashModule
+    Parent: 14388698646767823957
+    Children:
+      []
+    PrefabComponent:
+      Prefab: 14591180671159364733
+      Entity: 2536565472477860155
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, -0, 0]
+      Scale: [0.0119189518, 0.0119189499, 0.0119189499]
+    ScriptComponent:
+      ClassHandle: 3383057023
+      StoredFields:
+        - ID: 3454381800
+          Name: RedBloodHood.DashControl:dashSpeed
+          Type: 12
+          Data: 180
+        - ID: 2640456224
+          Name: RedBloodHood.DashControl:dashCooldown
+          Type: 12
+          Data: 0.5
+        - ID: 3468672735
+          Name: RedBloodHood.DashControl:dashDuration
+          Type: 12
+          Data: 0.0500000007
+        - ID: 2386597738
+          Name: RedBloodHood.DashControl:dashedAirbone
+          Type: 2
+          Data: false
+  - Entity: 14388698646767823957
+    TagComponent:
+      Tag: Player
+    Parent: 0
+    Children:
+      - Handle: 2536565472477860155
+      - Handle: 16658754191778708966
+      - Handle: 16590734654640915706
+      - Handle: 17281053002561685107
+      - Handle: 13574039278631189627
+    PrefabComponent:
+      Prefab: 14591180671159364733
+      Entity: 14388698646767823957
+    TransformComponent:
+      Position: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    ScriptComponent:
+      ClassHandle: 1196690083
+      StoredFields:
+        - ID: 291418393
+          Name: RedBloodHood.Movement:movementVector
+          Type: 17
+          Data: [0, 0]
+        - ID: 3609468036
+          Name: RedBloodHood.Movement:speed
+          Type: 12
+          Data: 65
+        - ID: 2710493863
+          Name: RedBloodHood.Movement:HORIZONTAL
+          Type: 8
+          Data: 0
+        - ID: 2603931029
+          Name: RedBloodHood.Movement:VERTICAL
+          Type: 8
+          Data: 1
+        - ID: 460724855
+          Name: RedBloodHood.Movement:FIXED_SPEED_FACTOR
+          Type: 12
+          Data: 10
+        - ID: 1007214441
+          Name: RedBloodHood.Movement:runningSpeed
+          Type: 12
+          Data: 65
+        - ID: 1250632465
+          Name: RedBloodHood.Movement:inputSmoothingLevel
+          Type: 12
+          Data: 1
+        - ID: 3646594579
+          Name: RedBloodHood.Movement:deadzone
+          Type: 12
+          Data: 0.100000001
+        - ID: 4150042676
+          Name: RedBloodHood.Movement:debug
+          Type: 2
+          Data: false
+    StaticMeshComponent:
+      AssetID: 8947119958053742311
+      MaterialTable:
+        0: 17018305255244772279
+    RigidBodyComponent:
+      BodyType: 1
+      LayerID: 0
+      Mass: 30
+      LinearDrag: 0.00999999978
+      AngularDrag: 0.0500000007
+      DisableGravity: false
+      IsKinematic: false
+      CollisionDetection: 1
+      LockFlags: "8"
+    CapsuleColliderComponent:
+      Radius: 0.25
+      Height: 0.5
+      Offset: [0, 0, 0]
+      IsTrigger: false
+      Material: 0

@@ -10,7 +10,9 @@ namespace RedBloodHood {
 	};
 
 	public class AxeControl : Entity {
-		
+
+
+		public float rotationSpeed = 2f;
 
 		private float travelSpeed;
 		private float travelTime;
@@ -87,10 +89,12 @@ namespace RedBloodHood {
 			//TODO: do this in physics
 			this.Translation += travelDirection * this.travelSpeed * ts;
 			//Do some rotation
-			Vector3 euler = this.Rotation;
-			const float ROT_BOOST_FACTOR = 1.5f;
-			euler.X = Quaternion.NormalizeAngle(euler.X + travelSpeed * ts * ROT_BOOST_FACTOR);
-			this.Rotation = euler;
+			//this.AddTorque(this.travelDirection * this.travelSpeed, ForceMode.Force);
+		}
+
+		private void DetectTargets() {
+			//Raycast to the travel direction
+			
 		}
 
 		public void RecallToPlayer(float proximityThreshold) {
@@ -107,9 +111,11 @@ namespace RedBloodHood {
 		}
 
 		private void Reattach() {
+			//Stop all the movement happenning in the rigidbody
 			this.travelDirection = Vector3.Zero;
 			this.Rotation = Quaternion.ToEulerAngles(this.initialRotation);
 			this.Translation = this.initialPosition;
+
 			this.Parent = this.PlayerRef;
 		}
 
